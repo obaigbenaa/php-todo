@@ -55,7 +55,7 @@ pipeline {
       }
     }
 
-    stage('SonarQube Quality Gate') {
+     stage('SonarQube Quality Gate') {
       when { branch pattern: "^develop*|^hotfix*|^release*|^main*", comparator: "REGEXP"}
         environment {
             scannerHome = tool 'sonarqubescanner'
@@ -70,7 +70,6 @@ pipeline {
         }
     }
 
-    }
      stage ('Package Artifact') {
       steps {
             sh 'zip -qr php-todo.zip ${WORKSPACE}/*'
@@ -104,3 +103,4 @@ pipeline {
      }
    }
  }
+}
