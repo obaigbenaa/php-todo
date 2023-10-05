@@ -69,7 +69,7 @@ pipeline {
             }
         }
     }
-    
+
     }
      stage ('Package Artifact') {
       steps {
@@ -104,4 +104,3 @@ pipeline {
      }
    }
  }
-}
